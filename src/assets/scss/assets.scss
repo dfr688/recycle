@@ -1,0 +1,83 @@
+@import './mixins';
+.assets{
+    height: 100%;
+    .search{
+        width: 5.6rem;
+        height: .56rem;
+        background: #ebeaea;
+        border-radius: .28rem;
+        opacity: 0.55;
+        font-size: .26rem;
+        text-align: center;
+        margin-left: 1.2rem;
+        padding-top: .05rem;
+        position: fixed;
+        top: .6rem;
+        input{
+            width: 80%;
+            height: 100%;
+            line-height: 100%;
+            font-size: .26rem;
+            &::-webkit-input-placeholder{
+                color: #c2c2c2;
+            }  
+        }
+        i{
+            display: inline-block;
+            width: .32rem;
+            height: .32rem;
+            @include background_img("~@/assets/images/home/search_1.png");
+            margin-right:.1rem;
+            margin-bottom: -.05rem;
+        }
+        span{
+            position: absolute;
+            top: .08rem;
+            left: -.8rem;
+            width: .4rem;
+            height: .4rem;
+            @include background_img("~@/assets/images/home/back.png");
+        }
+    }
+    .wrap{
+        width: 100%;
+        height: 100%;
+        padding-top: 1.8rem;
+        display: flex;
+        .van-sidebar{
+            width: 30%;
+            height: 100%;
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+            .van-sidebar-item{
+                padding: .4rem .24rem .4rem .16rem;
+                text-align: center;
+                border-left: .1rem solid transparent;
+                font-size: $font-size-large;
+                &--select{
+                    border-color: #0b9377;
+                    color: #0b9377;
+                }
+            }
+        }
+        .content{
+            width: 70%;
+            height: 100%;
+            overflow: scroll;
+            -webkit-overflow-scrolling: touch;
+            ul li{
+                font-size: $font-size-large;
+                padding: .4rem .24rem .4rem 1.4rem;
+                position: relative;
+                i.hot{
+                    position: absolute;
+                    left: .9rem;
+                    top: .4rem;
+                    width: .28rem;
+                    height: .36rem;
+                    @include background_img("~@/assets/images/home/hot.png");
+                }
+            }
+        }
+    }
+}

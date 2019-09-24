@@ -1,0 +1,109 @@
+@import './mixins';
+.placeOrder{
+    height: 100%;
+    .assets_price{
+        width: 6.7rem;
+        margin: 0 auto;
+        margin-top: .6rem;
+        background-image: $background-image;
+        border-radius: .1rem;
+        color: #fff;
+        font-size: $font-size-small;
+        padding: .4rem;
+        padding-right: 0;
+        p{
+            font-size: .4rem;
+            margin-bottom: .2rem;
+        }
+        span{
+            font-size: .8rem;
+        }
+        div{
+            width: 1.6rem;
+            height: .46rem;
+            border-radius: .23rem;
+            border: solid 1px #f1f1f1;
+            text-align: center;
+            line-height: .44rem;
+            margin-top: .1rem;
+        }
+    }
+    .remind{
+        width: 6.7rem;
+        height: .8rem;
+        line-height: .8rem;
+        box-shadow: $box-shadow2;
+        font-size: $font-size-small;
+        margin: 0 auto;
+        margin-top: .3rem;
+        text-align: center;
+        border-radius: .1rem;
+        background: #fff;
+    }
+    .basic_info{
+        margin-top: .4rem;
+        p{
+            font-size: .36rem;
+            margin-left: .4rem;
+            margin-bottom: .4rem;
+        }
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 .3rem;
+            li{
+                font-size: $font-size-middle;
+                padding: .2rem .3rem;
+                background: #eee;
+                border-radius: .4rem;
+                margin: 0 .1rem;
+                margin-bottom: .2rem;
+            }
+        }
+    }
+    .attention{
+        margin: 0 .4rem;
+        margin-top: .4rem;
+        margin-bottom: .5rem;
+        .title{
+            font-size: .36rem;
+            margin-bottom: .3rem;
+        }
+        ul{
+            display: flex;
+            li{
+                width: 3.2rem;
+                font-size: $font-size-middle;
+                box-shadow: $box-shadow2;
+                background: #fff;
+                border-radius: .1rem;
+                border: 1px solid #eee;
+                text-align: center;
+                padding: .3rem .2rem;
+                &:first-child{
+                    margin-right: .3rem;
+                }
+                i{
+                    display: inline-block;
+                    width: .8rem;
+                    height: .8rem;
+                    border: 1px solid #dcdcdc;
+                    border-radius: 100%;
+                    &.clear{
+                        @include background_img("~@/assets/images/home/clear.png",center,center,60%);
+                    }
+                    &.lock{
+                        @include background_img("~@/assets/images/home/lock.png",center,center,60%);
+                    }
+                }
+                p{
+                    margin: .2rem 0;
+                }
+                span{
+                    font-size: .26rem;
+                    color: #999;
+                }
+            }
+        }
+    }
+}

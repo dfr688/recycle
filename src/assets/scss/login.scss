@@ -1,0 +1,79 @@
+@import './mixins';
+.login{
+    height: 100%;
+    ul{
+        margin: 0 .5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.4rem;
+        li{
+            font-size: $font-size-large;
+            margin-bottom: .8rem;
+            padding-bottom: .3rem;
+            border-bottom: 1px solid #f1f1f1;
+            p{
+                margin-bottom: .2rem;
+                i{
+                    display: inline-block;
+                    margin-right: .2rem;
+                    margin-bottom: -.05rem;
+                    &.phone_icon{
+                        width: .28rem;
+                        height: .42rem;
+                        @include background_img("~@/assets/images/login/phone_icon.png");
+                    }
+                    &.psw_icon{
+                        width: .28rem;
+                        height: .37rem;
+                        @include background_img("~@/assets/images/login/psw_icon.png");
+                    }
+                }
+            }
+            input{
+                font-size: $font-size-large;
+                width: 100%;
+                &.loginPsw{
+                    -webkit-text-security:disc;
+                }
+            }
+        }
+    }
+    .tip{
+        font-size: .36rem;
+        text-align: center;
+        margin-top: 1rem;
+        span{
+            color: #097962;
+        }
+    }
+}
+.register{
+    ul{
+        margin-bottom: -.2rem;
+        .code_icon{
+            width: .34rem;
+            height: .4rem;
+            @include background_img("~@/assets/images/login/code_icon.png");
+        }
+        .registerPsw{
+            -webkit-text-security:disc;
+        }
+        .vcode{
+            .wrap{
+                display: flex;
+            }
+        }
+    }
+    .user_server{
+        font-size: .24rem;
+        color: #999;
+        text-align: center;
+        margin-top: -.3rem;
+        span{
+            color: #097962;
+        }
+    }
+    .tip{
+        margin-top: .6rem;
+        margin-bottom: .4rem;
+    }
+}
